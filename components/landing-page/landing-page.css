@@ -1,0 +1,30 @@
+.welcome-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.welcome-page {
+    width: 100%;
+    top: 0px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    min-height: 80vh; /* Adapts the height based on the content */
+    background: url('../../src/img/mao-banner.png') no-repeat center center;
+    background-size: contain; /* Ensures the entire image fits within the container */
+    background-color: rgb(255, 187, 230); /* Fallback background color */
+    background-position: bottom center;
+}
+
+.angel-welcome {
+    width: 25%;
+    height: 29em; /* Adapts the height based on the content */
+    background: url('../../src/img/angel-welcome.png') no-repeat center center;
+}
+
+.keith-welcome {
+    width: 25%;
+    height: 29em; /* Adapts the height based on the content */
+    background: url('../../src/img/angel-welcome.png') no-repeat center center;
+}

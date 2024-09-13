@@ -1,13 +1,31 @@
-// Fetch the quiz component and insert it into the page
-fetch('./components/quiz/quiz-component.html')
-    .then(response => response.text())
-    .then(data => {
-        // Insert the quiz component into the div with id "quiz-component"
-        document.getElementById('quiz-component').innerHTML = data;
+import './components/quiz/quiz-component.js';
+import './components/landing-page/landing-page.js';
 
-        // After the quiz component is loaded, load the quiz.js script
-        const script = document.createElement('script');
-        script.src = './components/quiz/quiz-component.js';
-        document.body.appendChild(script);
-    })
-    .catch(err => console.log('Error loading component:', err));
+const loadLandingPage = async () => {
+    try {
+        const response = await fetch('./components/landing-page/landing-page.html');
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const html = await response.text();
+        document.getElementById('landing-page').innerHTML = html;
+    } catch (err) {
+        console.error('Error loading landing page:', err);
+    }
+};
+
+const loadQuizComponent = async () => {
+    try {
+        const response = await fetch('./components/quiz/quiz-component.html');
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const html = await response.text();
+        document.getElementById('quiz-component').innerHTML = html;
+    } catch (err) {
+        console.error('Error loading component:', err);
+    }
+};
+
+loadLandingPage();
+loadQuizComponent();
