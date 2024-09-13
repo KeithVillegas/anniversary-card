@@ -1,9 +1,4 @@
-.welcome-page-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
+
 
 .welcome-page {
     width: 100%;
@@ -17,6 +12,20 @@
     background-position: bottom center;
 }
 
+.short-stack-regular {
+    width: 100%;
+    position: relative;
+    font-family: "Short Stack", cursive;
+    font-weight: 1000;
+    font-style: normal;
+    color: rgb(255, 183, 142);
+    top: 1em;
+    font-size: 2em;
+    text-align: center;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(219, 62, 62);
+}
+  
 .angel-welcome {
     width: 25%;
     height: 29em; /* Adapts the height based on the content */
@@ -27,4 +36,28 @@
     width: 25%;
     height: 29em; /* Adapts the height based on the content */
     background: url('../../src/img/angel-welcome.png') no-repeat center center;
+}
+
+@media (max-width: 768px) {
+    .welcome-page-container {
+        min-height: 60vh;
+    }
+
+    .welcome-page {
+        min-height: 50vh; /* Reduce the height for mobile devices */
+        background-size: 100%;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        background-position: bottom center;
+    }
+
+    .short-stack-regular {
+        font-size: 1.5em; /* Adjust font size for mobile */
+        top: 0.5em;
+    }
+
+    .angel-welcome, .keith-welcome {
+        width: 50%;
+        height: 15em; /* Adjust image height for mobile */
+    }
 }
