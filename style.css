@@ -1,3 +1,4 @@
 body{
-    background-color: #FFEBD4;
+    /* background-color: #FFEBD4; */
+    background: url('./src/img/pink_rice.png') fixed;
 }

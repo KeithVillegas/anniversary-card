@@ -1,35 +1,73 @@
 .welcome-page-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     position: relative;
+    width: 100%;
     height: 80vh;
+    background-color: rgb(255, 187, 230); /* Fallback background color */
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background: url('../../src/img/1qj.png') no-repeat center center;
+    background-size: 100%;
+    margin-top: -50px;
 }
 
 .welcome-page {
-    width: 100%;
-    top: 0px;
-    border-bottom-left-radius: 100px;
-    border-bottom-right-radius: 100px;
+    width: 50%;
     min-height: 80vh; /* Adapts the height based on the content */
-    background: url('../../src/img/mao-banner.png') no-repeat center center;
-    background-size: contain; /* Ensures the entire image fits within the container */
-    background-color: rgb(255, 187, 230); /* Fallback background color */
-    background-position: bottom center;
+    background: url('../../src/img/banner.png') no-repeat right center;
+    background-size: 100%; /* Ensures the entire image fits within the container */
 }
 
-.short-stack-regular {
+.silkscreen-regular {
+font-family: "Silkscreen", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+.silkscreen-bold {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    flex-grow: 1; 
+    width: 50%;
+}
+ 
+.concert-one-regular {
+    text-align: center;
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-size: 60px;
+    font-style: normal;
     width: 100%;
+    /* padding: 30px; */
+    color: aliceblue;
+    letter-spacing: 5px;
+    -webkit-text-stroke: 4px rgb(70, 42, 27, .80);
+    /* background: url('../../src/img/1qj.png') no-repeat center center;
+    background-size: 900px 515px; */
+  }
+
+.short-stack-regular {
+    width: 75%;
     position: relative;
     font-family: "Short Stack", cursive;
     font-weight: 1000;
     font-style: normal;
-    color: rgb(255, 183, 142);
+    color: rgb(255, 255, 255);
     top: 1em;
     font-size: 2em;
     text-align: center;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: rgb(219, 62, 62);
 }
   
 .angel-welcome {
@@ -46,20 +84,46 @@
 
 @media (max-width: 768px) {
     .welcome-page-container {
-        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        height: 55vh;
     }
 
     .welcome-page {
-        min-height: 50vh; /* Reduce the height for mobile devices */
+        min-height: 30vh; /* Reduce the height for mobile devices */
         background-size: 100%;
         border-bottom-left-radius: 50px;
         border-bottom-right-radius: 50px;
         background-position: bottom center;
+        width: 70%;
     }
 
+    .text-container {
+        position: relative;
+        top: 30px;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        justify-content: center; /* Center content vertically */
+        align-items: center; /* Center content horizontally */
+        width: 100%; /* Take up full width for better centering */
+        height: 100%; /* Take up full height for centering */
+        background-size: 100%;
+    }
+
+    .concert-one-regular {
+        font-size: 2em; /* Adjust font size for mobile */
+        text-align: center; /* Ensures the text is centered */
+        color: white; /* Text color */
+        -webkit-text-stroke: 2px rgb(70, 42, 27);
+        letter-spacing: 2px; /* Adjust letter spacing */
+        background-size: 400px 300px;
+    }
+    
     .short-stack-regular {
-        font-size: 1.5em; /* Adjust font size for mobile */
-        top: 0.5em;
+        font-size: 1em; /* Adjust font size for mobile */
+        top: 1em;
+        width: 65%;
     }
 
     .angel-welcome, .keith-welcome {
