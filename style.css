@@ -1,4 +1,37 @@
 body{
-    /* background-color: #FFEBD4; */
+    height: 100%;
+    margin: 0%;
+    scroll-behavior: smooth;
     background: url('./src/img/pink_rice.png') fixed;
+    overflow: hidden;
+}
+
+.container {
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.slide {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+    transition: transform 0.8s ease-in-out; /* Smoother transitions between slides */
+}
+
+.page1 {
+    height: 70vh;
+    background-image: linear-gradient(to bottom right, rgb(255, 187, 230), rgb(255, 185, 128)); /* Gradient background */
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+.page2{
+    height: 95vh;
+}
+
+.page3{
+    height: 95vh;
 }
