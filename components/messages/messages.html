@@ -4,32 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
-    <link rel="stylesheet" href="components/landing-page/landing-page.css">
+    <link rel="stylesheet" href="components/messages/messages.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Short+Stack&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-    <script src="components/landing-page/landing-page.js"></script>
+    <script src="components/messages/messages.js" defer></script> <!-- Ensure DOM is loaded -->
 </head>
 <body>
-    <div class="welcome-page-container">
-        <div class="text-container">
-            <div class="ahcy"></div>
-            <div class="neko-2"></div>
-            <div class="otter"></div>
-            <div class="short-stack-bold">Happy Anniversary!!!</div>
-            <div class="short-stack-regular">Here's to many more years of joy and togetherness!</div>
-            <div class="icon-container">
-                <span class="decorative-icon-1">⭐</span>
-                <span class="decorative-icon-2">❤️</span>
-            </div>
+    <div class="messages-container">
+        <!-- Message content that will slide in -->
+        <div class="message animate">
+            <div class="short-stack-bold-dark">First Photo Together</div>
+            <div class="short-stack-regular-dark">What that guy doin. But genuinely a good first photo of us.</div>
         </div>
-        <!-- <div class="welcome-bg"> -->
-        <div class="welcome-image">
-        <!-- </div> -->
-            <!-- <div class="angel-welcome"></div> -->
+        <div class="message animate">
+            <div class="short-stack-bold-dark">Second Photo Together</div>
+            <div class="short-stack-regular-dark">Another great memory captured in this moment.</div>
         </div>
+        <div style="height: 150vh;"></div> <!-- Spacer to create scrolling effect -->
     </div>
 </body>
 </html>

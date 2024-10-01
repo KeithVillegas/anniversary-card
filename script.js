@@ -53,21 +53,6 @@ const loadMessages = async () => {
     }
 };
 
-
-// const loadQuiz = async () => {
-//     try {
-//         const response = await fetch('./components/quiz/quiz-component.html');
-//         if (!response.ok) {
-//             throw new Error('Network response was not ok');
-//         }
-//         const html = await response.text();
-//         document.getElementById('quiz-component').innerHTML = html;
-//     } catch (err) {
-//         console.error('Error loading component:', err);
-//     }
-// };
-
 loadLandingPage();
 loadCarousel();
-// loadQuiz();
 loadMessages();
