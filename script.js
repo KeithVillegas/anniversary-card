@@ -52,7 +52,6 @@ const loadMessages = async () => {
     }
 };
 
-
 loadLandingPage();
 loadCarousel();
 loadMessages();
