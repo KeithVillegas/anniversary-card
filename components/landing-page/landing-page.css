@@ -17,13 +17,12 @@
     align-items: center;
     width: 50%;
     height: 70%;
-    background: url('../../src/img/1qj.png') no-repeat center center;
+    background: url('../../src/img/cork-landscape.png') no-repeat center center;
     background-size: 100%;
     margin-top: -50px;
     margin-left: 50px;
     animation: fadeIn 0.5s ease-in-out;
 }
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -39,14 +38,21 @@
     width: 50%;
     min-height: 80vh;
     background: url('../../src/img/banner.png') no-repeat center center;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, .5));
     background-size: 70%;
     cursor: pointer;
+    animation: fadeIn 0.5s ease-in-out;
 }
-
-/* .welcome-image:hover {
-    transform: scale(1.1);
-    transition: all 0.3s ease-in-out;
-} */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 .roboto-bold {
     position: relative;
@@ -79,6 +85,7 @@
     padding: 10px;
     border-radius: 15px;
     text-align: center;
+    /* filter: drop-shadow(0px 5px 5px rgba(255, 249, 249, 0.8)); */
 }
 
 .short-stack-regular {
@@ -126,13 +133,13 @@
     height: 14%;
     z-index: 1;
     background: url('../../src/img/ahcy.png') no-repeat center center;
-    background-size: cover;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, .5));
+    background-size: 100%;
     transform: scale(0.8);
     opacity: 0;
     animation: fadeInAndGrow 1s ease-in-out forwards;
     animation-delay: 0.5s;
 }
-
 @keyframes fadeInAndGrow {
     0% {
         opacity: 0;
@@ -152,6 +159,7 @@
     height: 20%;
     z-index: 1;
     background: url('../../src/img/neko-2.png') no-repeat center center;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, .5));
     background-size: 40%;
     opacity: 0; /* Start invisible */
     transform: scale(0.8); /* Start smaller */
@@ -168,7 +176,6 @@
         transform: scale(1);
     }
 }
-
 @keyframes snapRotate-right {
     0% {
         transform: rotate(20deg);
@@ -181,17 +188,18 @@
     }
 }
 
-.otter {
+.yang {
     position: absolute;
     top: 50%;
     left: 3%;
     width: 15%;
     height: 25%;
     z-index: 1;
-    background: url('../../src/img/otter.png') no-repeat center center;
-    background-size: 40%;
+    background: url('../../src/img/yang.png') no-repeat center center;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, .5));
+    background-size: 45%;
     opacity: 0; /* Start invisible */
-    transform: scale(0.8); /* Start smaller */
+    transform: scale(0.8); /* Start smaller and flipped horizontally */
     animation: fadeInAndGrowOtter 1s ease-in-out forwards, snapRotate-left 1.5s steps(2, end) infinite;
     animation-delay: 0.5s, 1.5s; /* Delay the rotation slightly after fade in */
 }
@@ -205,7 +213,6 @@
         transform: scale(1);
     }
 }
-
 @keyframes snapRotate-left {
     0% {
         transform: rotate(-20deg);
