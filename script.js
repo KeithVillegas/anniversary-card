@@ -1,4 +1,3 @@
-import './components/quiz/quiz-component.js';
 import './components/landing-page/landing-page.js';
 import './components/messages/messages.js';
 import './components/image-carousel/image-carousel.js';
@@ -52,6 +51,7 @@ const loadMessages = async () => {
         console.error('Error loading messages page:', err);
     }
 };
+
 
 loadLandingPage();
 loadCarousel();
